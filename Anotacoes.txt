@@ -1,0 +1,120 @@
+
+Criando um Objeto  "CLIENTE"
+
+   Const cliente = {
+        nome:"anrdre",
+        idade:36,
+        cpf:"12345678945",
+        email:"andre@email.com"
+   }
+
+
+   Console.log('Meu nome é ${cliente.nome} 
+                e tenho ${cliente.idade} anoes.'}
+
+                  ou com colchetes
+
+   Console.log('Meu nome é ${cliente["nome"]} 
+                e tenho ${cliente["idade"]} anoes.'}
+      
+
+
+
+   Console.log(clinete.cpf.Substring(0,3))
+
+     ==>> SUBSTRING irá mostrar os 3 primeiros 
+            caracteres co CPF
+                "123"
+
+
+ 
+    Const chaves =["nome","idade","cpf","email"]
+
+    Console.log(cliente[chaves[0]])
+
+       ==> irá exibir o nome do cliente
+
+
+    chaves.FOREACH(info => console.log(cliente[info]))
+
+       ===>>> irá exibir todos os dados do objeto CLIENTE
+                andre
+                36
+                12345678945
+                andre@email.com
+
+
+    Aicionando um campo novo ao Objeto CLIENTE
+
+
+        cline.fone ="95863124567"
+
+      Console.log(clinete);
+         {
+            nome:'anrdre',
+            idade:36,
+            cpf:'12345678945',
+            email:'andre@email.com',
+            fone:'95863124567'
+         } 
+
+
+
+
+      Alterando o conteudo de uma chave no OBJETO Cliene
+
+      cliente.fone ="89548778998"
+
+      Console.log(clinete);
+         {
+            nome:'anrdre',
+            idade:36,
+            cpf:'12345678945',
+            email:'andre@email.com',
+            fone:'89548778998'
+         } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
