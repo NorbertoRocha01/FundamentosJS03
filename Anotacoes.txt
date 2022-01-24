@@ -233,19 +233,289 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 
 
 
+    REcuperando dados do OBJETO
+
+   Const cliente = {
+        nome:"anrdre",
+        idade:36,
+        cpf:"12345678945",
+        email:"andre@email.com",
+        fones:["1123456785","213422345645"]
+        dependentes: [{ nome: 'Sara Silva', parentesco: 'filha',
+                            datanasc= '20/03/2011' }
+                      {nome:"Samia Maria", parentesco:"filha",
+                            datanasc:"04/01/2014"}                 
+                      ],
+        saldo: 100,
+        
+        depositar:function(valor)
+          {
+               this.saldo += valor
+           }
+         }
+
+
+         Let relatorio="";
+
+         For ( Let info in cliente ){
+           relatorio += '$(info)'
+         }
+ 
+         Console.log(relatorio)
+
+          ==>>  irá exibir os chaves do OBJETO
+      *****************
+
+   Const cliente = {
+        nome:"anrdre",
+        idade:36,
+        cpf:"12345678945",
+        email:"andre@email.com",
+        fones:["1123456785","213422345645"]
+        dependentes: [{ nome: 'Sara Silva', parentesco: 'filha',
+                            datanasc= '20/03/2011' }
+                      {nome:"Samia Maria", parentesco:"filha",
+                            datanasc:"04/01/2014"}                 
+                      ],
+        saldo: 100,
+        
+        depositar:function(valor)
+          {
+               this.saldo += valor
+           }
+         }
+
+
+         Let relatorio="";
+
+
+         For ( Let info In cliente){
+             if(typeof cliente[info] === "object" || Typeof
+               cliente[info] === "Function")
+
+            {
+                 continue
+            } else{
+                relatorio += '
+                   $(info) ==> ${cliente[info]}
+                   '
+            }
+           
+         }
+
+        console.log(relatorio)
+
+
+              nome ==> Andre
+
+              Idade ==> 16
+
+              cpf ==> 12345678945
+
+              email ==> andre@email.com
+
+              saldo ==> 100
+
+
+         =====>> TYPEOF
+            recupera o tipo da chave do OBJETO
+            se for "OBJECT" ou(||) "FUNCTION" 
+            não exibe nada
 
 
 
+*****************
+    Percorrer um objeto e testar suas chaves
 
+
+   Const cliente = {
+        nome:"anrdre",
+        idade:36,
+        cpf:"12345678945",
+        email:"andre@email.com",
+        fones:["1123456785","213422345645"]
+        dependentes: [{ nome: 'Sara Silva', parentesco: 'filha',
+                            datanasc= '20/03/2011' }
+                      {nome:"Samia Maria", parentesco:"filha",
+                            datanasc:"04/01/2014"}                 
+                      ],
+        saldo: 100,
+        
+        depositar:function(valor)
+          {
+               this.saldo += valor
+           }
+         }     
 
  
+        Const propsclientes = Object.keys(cliente)
+
+        console.log(propsclientes);
+          'nome',
+          'idade',
+          'cpf',            
+          'email',
+          'fones',
+          'dependentes',
+          'saldo',
+          'depositar'
+
+        Usar o Metodo INCLUDE -->> verificação em um array, 
+                                   retorna False/TRue
 
 
 
-
+   Const cliente = {
+        nome:"anrdre",
+        idade:36,
+        cpf:"12345678945",
+        email:"andre@email.com",
+        fones:["1123456785","213422345645"]
+        dependentes: [{ nome: 'Sara Silva', parentesco: 'filha',
+                            datanasc= '20/03/2011' }
+                      {nome:"Samia Maria", parentesco:"filha",
+                            datanasc:"04/01/2014"}                 
+                      ],
+        saldo: 100,
+        
+        depositar:function(valor)
+          {
+               this.saldo += valor
+           }
+         }     
 
  
-            
+         Function oferecerseguro(obj){
+            Const propsclientes = Object.keys(obj);
+            if(propsclientes.includes("dependentes"))
+            {
+               console.log('oferta de seguro de 
+                            vida para ${obj.nome}');
+            }
+
+         }
+         oferecerseguro(cliente)
+
+
+
+    ****
+        console.log(Object.VALUES(cliente))
+         --->> retorna com os valores das chaves
+
+
+        console.log(object.ENTRIES(cliente))
+          --->> retorna varios arrays com chave e conteudo
+             [ 'nome', 'Andre' ]
+
+
+****************************************
+
+
+      mostra dados de um OBJETO com varias 
+           informações ou mais de 1 cliente
+
+
+      Const listadedependentes = [...clientes[0].dependentes,
+              ...clientes[1].dependentes]
+
+        ====>>> pegando os dados dos dependentes do 
+                 1o cliente na posição 0 do array
+
+                 2o cliente na posicao 1 do array
+
+
+        Console.TABLE(listadependentes)
+          ----> mostra na tela em formato de TABELA
+                com asuas respectivas colunas
+
+
+
+       Obs: uma lista com varios clientes, fazer um loop
+            para recuperar os dados de cada cliente
+
+
+
+
+https://www.youtube.com/watch?v=f8a-qwKC5yk
+
+Neste Alura +, a nossa instrutora Juliana Negreiros explica sobre o uso do destructuring (desconstrução) no JavaScript. O que é? Como usar? Descubra agora! 😉
+
+#javascript #destructuring #js
+
+✔ Curtiu esse vídeo? Então, assista também:
+
+▶ O que é JavaScript? | #HipstersPontoTube
+https://www.youtube.com/watch?v=NaVSb...
+
+▶ Destructuring em JavaScript #AluraMais
+https://www.youtube.com/watch?v=f8a-q...
+
+▶ Alura Live #50 - Testes em Javascript
+https://www.youtube.com/watch?v=HgKRC...
+
+▶ Javascript funcional - Alura live #93
+https://www.youtube.com/watch?v=Khbek...
+
+▶ Comece a programar com Javascript - Alura Live #26
+https://www.youtube.com/watch?v=i5n8s...
+
+📄 Quer saber sobre as novidades do universo da tecnologia e semanas de conteúdo gratuito da Alura? https://www.alura.com.br/imersao
+
+🎧 Podcast Hipsters.Tech: https://open.spotify.com/show/2p0Vx75...
+
+
+
+
+
+***************************************
+
+pesquisar JSON no javascript
+
+pesquisar METODOS
+          PROTOTYPE
+          ORIENTAÇÃO A OBJETOS JS
+          CLASSES
+
+
+***************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
